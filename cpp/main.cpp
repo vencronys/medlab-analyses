@@ -16,14 +16,20 @@
 #include "Examens.h"
 #include "Prelevement.h"
 #include "DatabaseManager.h"
+#include "Logger.h"
 
 using namespace std;
 int main(int argc, char** argv)
 {
+	Logger logger("application.log");
+	logger.log("Starting application", Logger::LogLevel::INFO);
 	if (argc < 5) {
 		std::cerr << "Usage: " << argv[0] << " <email> <password> <prelevement_id> <nb_examens>" << std::endl;
+		logger.log("Insufficient arguments provided", Logger::LogLevel::ERROR);
 		return 1;
 	}
+
+	logger.log("Arguments provided: " + std::to_string(argc), Logger::LogLevel::INFO);
 
 	std::string email = argv[1];
 	std::string password = argv[2];
@@ -31,17 +37,21 @@ int main(int argc, char** argv)
 	Prelevement prelevement(std::stoi(argv[3]), std::stoi(argv[4]));
 
 	try {
+		logger.log("Connecting to database", Logger::LogLevel::INFO);
 		// Initialize the DatabaseManager
 		DatabaseManager dbManager("tcp://localhost:3306", "root", "root", "disn1imh_v13_ma");
+		logger.log("Database connection established", Logger::LogLevel::INFO);
 
 		// Verify technician login
 		int id_technicien;
 		if (!dbManager.verifyTechnician(email, password, id_technicien)) {
 			std::cerr << "Login failed: Invalid email or password, or account is not active." << std::endl;
+			logger.log("Login failed: Invalid email or password, or account is not active.", Logger::LogLevel::ERROR);
 			return 1;
 		}
 		Technicien technicien(id_technicien);
 		std::cout << "Technician logged in successfully. ID: " << technicien.getId() << std::endl;
+		logger.log("Technician logged in successfully. ID: " + std::to_string(technicien.getId()), Logger::LogLevel::INFO);
 
 
 		// Retrieve available exams for the prelevement
@@ -62,6 +72,7 @@ int main(int argc, char** argv)
 	}
 	catch (sql::SQLException& e) {
 		std::cerr << "SQL Error: " << e.what() << std::endl;
+		logger.log("SQL Error: " + std::string(e.what()), Logger::LogLevel::ERROR);
 		return 1;
 	}
 

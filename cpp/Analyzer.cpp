@@ -1,6 +1,7 @@
-#include "Analyzer.h"
 #include <ctime>
 #include <sstream>
+#include "Analyzer.h"
+#include "Logger.h"
 
 // Helper function to get the current date in YYYY-MM-DD format
 std::string Analyzer::getCurrentDate() {
@@ -15,6 +16,8 @@ std::string Analyzer::getCurrentDate() {
 
 // Generate results for AnalyseGenerale
 AnalyseGenerale Analyzer::generateAnalyseGenerale(int id_prelevement, int id_examen, int id_technicien) {
+	Logger logger("application.log");
+	logger.log("Generating AnalyseGenerale", Logger::LogLevel::INFO);
 	return AnalyseGenerale(
 		0,
 		TextBuffer("Normal blood cell count"),
@@ -37,6 +40,8 @@ AnalyseGenerale Analyzer::generateAnalyseGenerale(int id_prelevement, int id_exa
 
 // Generate results for AnalyseCholesterol
 AnalyseCholesterol Analyzer::generateAnalyseCholesterol(int id_prelevement, int id_examen, int id_technicien) {
+	Logger logger("application.log");
+	logger.log("Generating AnalyseCholesterol", Logger::LogLevel::INFO);
 	return AnalyseCholesterol(
 		0,
 		TextBuffer("Cholesterol levels within normal range"),
@@ -59,6 +64,8 @@ AnalyseCholesterol Analyzer::generateAnalyseCholesterol(int id_prelevement, int 
 
 // Generate results for AnalyseGlucose
 AnalyseGlucose Analyzer::generateAnalyseGlucose(int id_prelevement, int id_examen, int id_technicien) {
+	Logger logger("application.log");
+	logger.log("Generating AnalyseGlucose", Logger::LogLevel::INFO);
 	return AnalyseGlucose(
 		0,
 		TextBuffer("Glucose levels within normal range"),
@@ -77,6 +84,8 @@ AnalyseGlucose Analyzer::generateAnalyseGlucose(int id_prelevement, int id_exame
 
 // Generate results for AnalyseHemoglobine
 AnalyseHemoglobine Analyzer::generateAnalyseHemoglobine(int id_prelevement, int id_examen, int id_technicien) {
+	Logger logger("application.log");
+	logger.log("Generating AnalyseHemoglobine", Logger::LogLevel::INFO);
 	return AnalyseHemoglobine(
 		0,
 		TextBuffer("Hemoglobin levels within normal range"),
@@ -95,6 +104,8 @@ AnalyseHemoglobine Analyzer::generateAnalyseHemoglobine(int id_prelevement, int 
 
 // Generate results for AnalyseVitamineD
 AnalyseVitamineD Analyzer::generateAnalyseVitamineD(int id_prelevement, int id_examen, int id_technicien) {
+	Logger logger("application.log");
+	logger.log("Generating AnalyseVitamineD", Logger::LogLevel::INFO);
 	return AnalyseVitamineD(
 		0,
 		TextBuffer("Vitamin D levels within normal range"),
@@ -132,6 +143,8 @@ Analyse* Analyzer::generateAnalyse(int id_prelevement, int id_examen, int id_tec
 }
 
 void Analyzer::generateAndInsertAnalyseGenerale(int id_prelevement, int id_examen, int id_technicien, DatabaseManager& dbManager) {
+	Logger logger("application.log");
+	logger.log("Generating and inserting AnalyseGenerale", Logger::LogLevel::INFO);
 	AnalyseGenerale analyseGenerale = generateAnalyseGenerale(id_prelevement, id_examen, id_technicien);
 	// Insert the analyse into the database
 	std::string insertQuery = "INSERT INTO disn1imh_v13_analyse_generale "
@@ -144,9 +157,12 @@ void Analyzer::generateAndInsertAnalyseGenerale(int id_prelevement, int id_exame
 		std::to_string(id_prelevement) + ", " + std::to_string(id_examen) + ", " + std::to_string(id_technicien) + ", 1, 1)";
 	dbManager.executeUpdate(insertQuery);
 	std::cout << "AnalyseGenerale inserted successfully." << std::endl;
+	logger.log("AnalyseGenerale inserted successfully.", Logger::LogLevel::INFO);
 }
 
 void Analyzer::generateAndInsertAnalyseCholesterol(int id_prelevement, int id_examen, int id_technicien, DatabaseManager& dbManager) {
+	Logger logger("application.log");
+	logger.log("Generating and inserting AnalyseCholesterol", Logger::LogLevel::INFO);
 	AnalyseCholesterol analyseCholesterol = generateAnalyseCholesterol(id_prelevement, id_examen, id_technicien);
 	// Insert the analyse into the database
 	std::string insertQuery = "INSERT INTO disn1imh_v13_analyse_cholesterol "
@@ -159,9 +175,12 @@ void Analyzer::generateAndInsertAnalyseCholesterol(int id_prelevement, int id_ex
 		std::to_string(id_prelevement) + ", " + std::to_string(id_examen) + ", " + std::to_string(id_technicien) + ", 1, 1)";
 	dbManager.executeUpdate(insertQuery);
 	std::cout << "AnalyseCholesterol inserted successfully." << std::endl;
+	logger.log("AnalyseCholesterol inserted successfully.", Logger::LogLevel::INFO);
 }
 
 void Analyzer::generateAndInsertAnalyseGlucose(int id_prelevement, int id_examen, int id_technicien, DatabaseManager& dbManager) {
+	Logger logger("application.log");
+	logger.log("Generating and inserting AnalyseGlucose", Logger::LogLevel::INFO);
 	AnalyseGlucose analyseGlucose = generateAnalyseGlucose(id_prelevement, id_examen, id_technicien);
 	// Insert the analyse into the database
 	std::string insertQuery = "INSERT INTO disn1imh_v13_analyse_glucose "
@@ -172,8 +191,11 @@ void Analyzer::generateAndInsertAnalyseGlucose(int id_prelevement, int id_examen
 		std::to_string(id_prelevement) + ", " + std::to_string(id_examen) + ", " + std::to_string(id_technicien) + ", 1, 1)";
 	dbManager.executeUpdate(insertQuery);
 	std::cout << "AnalyseGlucose inserted successfully." << std::endl;
+	logger.log("AnalyseGlucose inserted successfully.", Logger::LogLevel::INFO);
 }
 void Analyzer::generateAndInsertAnalyseHemoglobine(int id_prelevement, int id_examen, int id_technicien, DatabaseManager& dbManager) {
+	Logger logger("application.log");
+	logger.log("Generating and inserting AnalyseHemoglobine", Logger::LogLevel::INFO);
 	AnalyseHemoglobine analyseHemoglobine = generateAnalyseHemoglobine(id_prelevement, id_examen, id_technicien);
 	// Insert the analyse into the database
 	std::string insertQuery = "INSERT INTO disn1imh_v13_analyse_hemoglobine "
@@ -184,8 +206,11 @@ void Analyzer::generateAndInsertAnalyseHemoglobine(int id_prelevement, int id_ex
 		std::to_string(id_prelevement) + ", " + std::to_string(id_examen) + ", " + std::to_string(id_technicien) + ", 1, 1)";
 	dbManager.executeUpdate(insertQuery);
 	std::cout << "AnalyseHemoglobine inserted successfully." << std::endl;
+	logger.log("AnalyseHemoglobine inserted successfully.", Logger::LogLevel::INFO);
 }
 void Analyzer::generateAndInsertAnalyseVitamineD(int id_prelevement, int id_examen, int id_technicien, DatabaseManager& dbManager) {
+	Logger logger("application.log");
+	logger.log("Generating and inserting AnalyseVitamineD", Logger::LogLevel::INFO);
 	AnalyseVitamineD analyseVitamineD = generateAnalyseVitamineD(id_prelevement, id_examen, id_technicien);
 	// Insert the analyse into the database
 	std::string insertQuery = "INSERT INTO disn1imh_v13_analyse_vitamine_d "
@@ -196,6 +221,7 @@ void Analyzer::generateAndInsertAnalyseVitamineD(int id_prelevement, int id_exam
 		std::to_string(id_prelevement) + ", " + std::to_string(id_examen) + ", " + std::to_string(id_technicien) + ", 1, 1)";
 	dbManager.executeUpdate(insertQuery);
 	std::cout << "AnalyseVitamineD inserted successfully." << std::endl;
+	logger.log("AnalyseVitamineD inserted successfully.", Logger::LogLevel::INFO);
 }
 
 
