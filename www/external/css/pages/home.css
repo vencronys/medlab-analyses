@@ -1,5 +1,5 @@
 .hero {
-    background-image: url('/medlab-analyses/www/external/images/hero_lab.jpg');
+    background-image: url('/medlab-analyses/www/external/images/hero_lab.avif');
     z-index: 0;
     background-size: cover;
     background-position: center;
@@ -147,7 +147,7 @@
     height: 300px;
     margin: 80px 0;
     position: relative;
-    /* background-image: url("/medlab-analyses/www/external/images/welcome-duow.jpg"); */
+    /* background-image: url("/medlab-analyses/www/external/images/welcome-duow.avif"); */
     /* background-size: cover; */
     /* background-position: center; */
     box-shadow: var(--shadow);
@@ -259,7 +259,7 @@
 
 .home-services > div:last-child > div:first-child,
 .home-services > div:last-child > div:last-child {
-    background-image: url(/medlab-analyses/www/external/images/service_1.jpg);
+    background-image: url(/medlab-analyses/www/external/images/service_1.avif);
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -270,7 +270,7 @@
 }
 
 .home-services > div:last-child > div:last-child {
-    background-image: url(/medlab-analyses/www/external/images/service_1.jpg);
+    background-image: url(/medlab-analyses/www/external/images/service_2.avif);
     margin-top: 24px;
 }
 

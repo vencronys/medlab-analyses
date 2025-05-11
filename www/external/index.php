@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-<!-- index.php - Entry point for the application -->
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,6 +10,11 @@ session_start();
     <title>MedLab Analyses</title>
     <script src="https://kit.fontawesome.com/0197b6ebf2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        .home-services-cards-container {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body class="home-page">
@@ -25,7 +29,8 @@ session_start();
             <p>caring for life</p>
             <h2>Leading The Way <br>
                 In Medical Analysis</h2>
-            <button class="btn">Nos Services</button>
+            <button onclick="window.location.href='/medlab-analyses/www/external/pages/services.php'" class="btn">Nos
+                Services</button>
         </div>
         <p class="hero-img-credits">
             <a
@@ -35,11 +40,13 @@ session_start();
     </div>
 
     <div class="hero-cards flex flex-gap-24px">
-        <button class="btn card flex-1 flex flex-jus-con-spa-bet flex-ali-ite-cen">
+        <button onclick="window.location.href='/medlab-analyses/www/external/pages/rdv-form.php'"
+            class="btn card flex-1 flex flex-jus-con-spa-bet flex-ali-ite-cen">
             <p>Prise de RDV</p>
             <i class="fa-solid fa-calendar-days"></i>
         </button>
-        <button class="btn card flex-1 flex flex-jus-con-spa-bet flex-ali-ite-cen">
+        <button onclick="window.location.href='/medlab-analyses/www/external/pages/contact-form.php'"
+            class="btn card flex-1 flex flex-jus-con-spa-bet flex-ali-ite-cen">
             <p>Contactez-nous</p>
             <i class="fa-solid fa-phone-volume"></i>
         </button>
@@ -54,14 +61,14 @@ session_start();
         <h3>Un endroit idéal pour faire vos analyses</h3>
         <p>Medlab est un laboratoire médical de pointe qui offre des services de qualité et des analyses fiables. Nous
             sommes fiers de notre expertise et de notre engagement envers la santé et la qualité des analyses.</p>
-        <a href="" class="flex flex-ali-ite-cen flex-jus-con-cen flex-gap-8px">
+        <a href="pages/about.php" class="flex flex-ali-ite-cen flex-jus-con-cen flex-gap-8px">
             En savoir plus
             <i class="fa-solid fa-arrow-right"></i>
         </a>
     </div>
 
     <div class="welcome-img">
-        <img src="/medlab-analyses/www/external/images/welcome-duow.jpg" alt="Two lab nerds analysing blood">
+        <img src="/medlab-analyses/www/external/images/welcome-duow.avif" alt="Two lab nerds analysing blood">
         <a href="https://www.pexels.com/photo/a-man-and-a-woman-holding-a-test-tube-5726837/"
             class="welcome-img-credits">Photo by Artem Podrez</a>
     </div>
@@ -81,22 +88,22 @@ session_start();
 
                 <div class="flex flex-dir-col flex-jus-con-cen flex-ali-ite-cen">
                     <i class="fa-solid fa-vial"></i>
-                    <p>Analyse generale</p>
+                    <p>Analyse cholesterole</p>
                 </div>
 
                 <div class="flex flex-dir-col flex-jus-con-cen flex-ali-ite-cen">
                     <i class="fa-solid fa-vial"></i>
-                    <p>Analyse generale</p>
+                    <p>Analyse glucose</p>
                 </div>
 
                 <div class="flex flex-dir-col flex-jus-con-cen flex-ali-ite-cen">
                     <i class="fa-solid fa-vial"></i>
-                    <p>Analyse generale</p>
+                    <p>Analyse hemoglobine</p>
                 </div>
 
                 <div class="flex flex-dir-col flex-jus-con-cen flex-ali-ite-cen">
                     <i class="fa-solid fa-vial"></i>
-                    <p>Analyse generale</p>
+                    <p>Analyse vitamine D</p>
                 </div>
 
 
@@ -106,37 +113,41 @@ session_start();
                 <h4>Une passion pour donner la priorité aux patients.</h4>
                 <div class="flex flex-gap-40px flex-ali-ite-cen">
                     <ul>
-                        <li>A Passion for Healing</li>
-                        <li>All our best</li>
-                        <li>A Legacy of Excellence</li>
+                        <li>Analyses fiables et rapides</li>
+                        <li>Rendez-vous simplifié</li>
+                        <li>Suivi patient sécurisé</li>
                     </ul>
                     <ul>
-                        <li>A Passion for Healing</li>
-                        <li>All our best</li>
-                        <li>A Legacy of Excellence</li>
+                        <li>Professionnels qualifiés</li>
+                        <li>Technologie de pointe</li>
+                        <li>Engagés pour votre santé</li>
                     </ul>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, illum a nisi sapiente nobis odio
-                    autem laborum adipisci itaque molestiae maiores! Dolore blanditiis officiis aperiam commodi quam
-                    illum, exercitationem natus.</p>
+                <p>MedLab est une solution numérique conçue pour moderniser la gestion des laboratoires d’analyses
+                    médicales.
+                    Elle facilite la prise de rendez-vous, la gestion des résultats et la coordination entre les
+                    différents intervenants du laboratoire.</p>
 
                 <br>
 
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas dolores numquam perspiciatis inventore
-                    vitae nesciunt, odit reiciendis excepturi! Laboriosam officiis ipsa incidunt facere natus rem, ad
-                    odit earum beatae quae perferendis est quasi harum autem reprehenderit ullam magnam velit odio sunt
-                    repellat inventore dolores asperiores. Molestiae, perspiciatis cumque. Inventore voluptates
-                    praesentium, dolores voluptatibus placeat facere voluptate sit reprehenderit? Minus nulla amet, ut
-                    neque autem optio laborum suscipit fugit nostrum laboriosam odit harum labore cumque, repudiandae
-                    voluptates excepturi consequatur expedita quod ad eius dolores veritatis et, a quaerat? Similique
-                    sequi quasi placeat tempora minus facilis omnis nisi porro sed. Quasi, magnam.</p>
+                <p>Côté patient, MedLab offre une plateforme intuitive pour créer un compte, réserver un prélèvement
+                    sanguin et consulter ses résultats d’analyse en ligne en toute sécurité. Les examens proposés
+                    incluent notamment le glucose, le cholestérol, l’hémoglobine, la vitamine D ainsi qu’un panel
+                    d’analyses générales. Le patient reçoit des notifications automatiques lors de la validation d’un
+                    rendez-vous ou dès que ses résultats sont disponibles. Ce système vise à réduire les déplacements
+                    inutiles et accélérer l’accès aux informations médicales tout en garantissant la confidentialité des
+                    données. L’interface est pensée pour être accessible à tous, quel que soit le niveau de familiarité
+                    avec les outils numériques.</p>
 
                 <br>
 
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti sequi at eveniet voluptatem alias
-                    nostrum, minus sed, exercitationem error non molestiae quibusdam rem repudiandae debitis suscipit
-                    ullam consequuntur fugiat illum?
+                    Pour les professionnels, MedLab intègre des modules adaptés aux secrétaires, infirmiers, techniciens
+                    et chefs techniciens. Les secrétaires gèrent les comptes et les rendez-vous, les infirmiers
+                    enregistrent les prélèvements réalisés, tandis que les techniciens accèdent à une application dédiée
+                    pour suivre les échantillons, saisir les résultats et les valider. Le chef technicien dispose d’une
+                    vue d’ensemble sur les activités techniques du laboratoire, les performances du personnel, et peut
+                    consulter des statistiques opérationnelles.
                 </p>
             </div>
 
@@ -145,7 +156,7 @@ session_start();
                     <a href="https://www.pexels.com/photo/a-man-holding-a-test-tube-9629677/">Photo by Ivan Samkov</a>
                 </div>
                 <div>
-                    <a href="https://www.pexels.com/photo/a-man-holding-a-test-tube-9629677/">Photo by Ivan Samkov</a>
+                    <a href="https://www.pexels.com/photo/blood-samples-4047146/">Photo by Kaboompics.com</a>
                 </div>
             </div>
 

@@ -62,17 +62,17 @@ session_start();
             <h2>Notre Équipe</h2>
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="../assets/images/doctor1.jpg" alt="Dr. Sophie Martin">
+                    <img src="../images/directrice_medical.avif" alt="Dr. Sophie Martin">
                     <h3>Dr. Sophie Martin</h3>
                     <p class="role">Directrice Médicale</p>
                 </div>
                 <div class="team-member">
-                    <img src="../assets/images/doctor2.jpg" alt="Dr. Thomas Bernard">
+                    <img src="../images/chef_labo.avif" alt="Dr. Thomas Bernard">
                     <h3>Dr. Thomas Bernard</h3>
                     <p class="role">Chef de Laboratoire</p>
                 </div>
                 <div class="team-member">
-                    <img src="../assets/images/doctor3.jpg" alt="Dr. Marie Dubois">
+                    <img src="../images/respo_qualite.avif" alt="Dr. Marie Dubois">
                     <h3>Dr. Marie Dubois</h3>
                     <p class="role">Responsable Qualité</p>
                 </div>
