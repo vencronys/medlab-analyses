@@ -133,7 +133,6 @@ Analyse* Analyzer::generateAnalyse(int id_prelevement, int id_examen, int id_tec
 
 void Analyzer::generateAndInsertAnalyseGenerale(int id_prelevement, int id_examen, int id_technicien, DatabaseManager& dbManager) {
 	AnalyseGenerale analyseGenerale = generateAnalyseGenerale(id_prelevement, id_examen, id_technicien);
-	std::cout << "Error in GEN" << std::endl;
 	// Insert the analyse into the database
 	std::string insertQuery = "INSERT INTO disn1imh_v13_analyse_generale "
 		"(globules_rouges, globules_rouges_unit, globules_blancs, globules_blancs_unit, plaquettes, plaquettes_unit, interpretation_analyse_generale, "
@@ -149,7 +148,6 @@ void Analyzer::generateAndInsertAnalyseGenerale(int id_prelevement, int id_exame
 
 void Analyzer::generateAndInsertAnalyseCholesterol(int id_prelevement, int id_examen, int id_technicien, DatabaseManager& dbManager) {
 	AnalyseCholesterol analyseCholesterol = generateAnalyseCholesterol(id_prelevement, id_examen, id_technicien);
-	std::cout << "Error in GHO" << std::endl;
 	// Insert the analyse into the database
 	std::string insertQuery = "INSERT INTO disn1imh_v13_analyse_cholesterol "
 		"(cholesterol_total, cholesterol_unit, cholesterol_ldl, cholesterol_hdl, triglycerides, triglycerides_unit, interpretation_analyse_cholesterol, "
@@ -204,18 +202,6 @@ void Analyzer::generateAndInsertAnalyseVitamineD(int id_prelevement, int id_exam
 // A wrapper for the wrapper that takes a list of exam codes to analyse and insert each one in the database using DatabaseManager class
 void Analyzer::generateAndInsertAnalyses(Technicien technicien, Prelevement prelevement, DatabaseManager& dbManager) {
 	for (int i = 0; i < prelevement.getExamens().getSize(); ++i) {
-		//Examen& examen = prelevement.getExamens()[i];
-		std::cout << "Exam code: " << prelevement.getExamens()[i].getCode() << std::endl;
-		//std::cout << "GEN" << std::endl;
-		//std::cout << "Length of getCode(): " << std::string(prelevement.getExamens()[i].getCode()).length() << std::endl;
-		//std::cout << "Length of 'GEN': " << std::string("GEN").length() << std::endl;
-
-		//std::cout << examen.getCode() << std::endl;
-        // Fix for E2140 and E0299 errors
-        // The issue is caused by the precedence of the '==' operator and the insertion operator '<<'.
-        // Parentheses are added to ensure the comparison is evaluated correctly before being passed to std::cout.
-        //std::cout << (prelevement.getExamens()[i].getCode() == "GEN") << std::endl;
-		//return;
 		if (prelevement.getExamens()[i].getCode() == std::string("GEN")) {
 			generateAndInsertAnalyseGenerale(prelevement.getId(), prelevement.getExamens()[i].getId(), technicien.getId(), dbManager);
 

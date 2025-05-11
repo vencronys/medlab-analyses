@@ -11,7 +11,16 @@ if (isset($_SESSION['id_compte'])) {
     $logger->log('FORM_ACCESS', $_SESSION['id_compte'], 'Accessed appointment booking form');
 } else {
     $logger->log('FORM_ACCESS', null, 'Guest accessed appointment booking form');
+    header("Location: /medlab-analyses/www/external/pages/login-form.php");
+    exit();
 }
+
+if (isset($_SESSION['statut_compte']) && $_SESSION['statut_compte'] == 'INACTIF') {
+    $logger->log('FORM_ACCESS', $_SESSION['id_compte'], 'Accessed appointment booking form with INACTIF statut');
+    header("Location: /medlab-analyses/www/external/pages/profile.php?error=rak-msusspandi-asa7bi");
+    exit();
+}
+
 ?>
 <html lang="en">
 
