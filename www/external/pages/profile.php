@@ -11,7 +11,7 @@ $id_compte = $_SESSION['id_compte'];
 
 include('../includes/database.php');
 
-$query = "SELECT * FROM disn1imh_v13_patient p INNER JOIN disn1imh_v13_compte c ON p.id_compte = c.id_compte WHERE p.id_compte = :id_compte";
+$query = "SELECT p.*, c.email_compte FROM disn1imh_v13_patient p INNER JOIN disn1imh_v13_compte c ON p.id_compte = c.id_compte WHERE p.id_compte = :id_compte";
 $stmt = $conn->prepare($query);
 $stmt->execute([
     "id_compte" => $_SESSION["id_compte"]
@@ -19,6 +19,7 @@ $stmt->execute([
 
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+$id_patient = $result[0]['id_patient'];
 $nom_patient = $result[0]["nom_patient"];
 $prenom_patient = $result[0]["prenom_patient"];
 $cin_patient = $result[0]["cin_patient"];
@@ -37,6 +38,21 @@ $stmt->execute([
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $list_rdv = $result;
+
+
+$query = "SELECT e.nom_examen
+FROM disn1imh_v13_examen e INNER JOIN disn1imh_v13_prelevement_examen pe ON e.id_examen = pe.id_examen
+    INNER JOIN disn1imh_v13_prelevement p ON pe.id_prelevement = p.id_prelevement
+WHERE p.id_patient = :id_patient";
+
+$stmt = $conn->prepare($query);
+$stmt->execute([
+    "id_patient" => $id_patient
+]);
+
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$list_examens = $result;
 
 ?>
 <!DOCTYPE html>
@@ -94,7 +110,22 @@ $list_rdv = $result;
             <section class="profile-card recent-results">
                 <h2><i class="fas fa-flask"></i> Derniers Résultats</h2>
                 <div class="results-list">
-                    <div class="result-item">
+                    <?php
+                    if (count($list_examens) == 0) {
+                        echo "<p>Aucun examen trouvé.</p>";
+                    } else {
+                        foreach ($list_examens as $row) {
+                            echo "<div class='result-item'>";
+                            echo "<div class='result-info'>";
+                            echo "<h3>" . htmlspecialchars($row['nom_examen']) . "</h3>";
+                            echo "<p class='date'>28/04/2025</p>";
+                            echo "</div>";
+                            echo "<a href='#' class='btn-view'>Voir <i class='fas fa-chevron-right'></i></a>";
+                            echo "</div>";
+                        }
+                    }
+                    ?>
+                    <!-- <div class="result-item">
                         <div class="result-info">
                             <h3>Analyse Generale</h3>
                             <p class="date">28/04/2025</p>
@@ -107,7 +138,7 @@ $list_rdv = $result;
                             <p class="date">15/04/2025</p>
                         </div>
                         <a href="#" class="btn-view">Voir <i class="fas fa-chevron-right"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </section>
 

@@ -25,6 +25,15 @@
     outline: none;
 }
 
+.logout-btn {
+    background-color: #a01c29;
+    color: var(--white);
+}
+
+.logout-btn:hover {
+    background-color: #8b1a26;
+}
+
 .lis-sty-non {
     list-style: none;
 }

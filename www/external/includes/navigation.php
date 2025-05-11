@@ -11,7 +11,7 @@
         <?php
         if (isset($_SESSION['id_compte'])) {
             echo "<button class='btn' onclick='window.location.href=\"/medlab-analyses/www/external/pages/Profile.php\"'>Profile</button>";
-            echo "<button class='btn' onclick='window.location.href=\"/medlab-analyses/www/external/pages/logout.php\"'>Se deconnecter</button>";
+            echo "<button class='btn logout-btn' onclick='window.location.href=\"/medlab-analyses/www/external/pages/logout.php\"'>Se deconnecter</button>";
         } else {
             echo "<button class='btn' onclick='window.location.href=\"/medlab-analyses/www/external/pages/login-form.php\"'>Se connecter</button>";
             echo "<button class='btn' onclick='window.location.href=\"/medlab-analyses/www/external/pages/signup-form.php\"'>S'inscrire</button>";
