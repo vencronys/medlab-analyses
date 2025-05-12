@@ -146,6 +146,7 @@
     <ClCompile Include="DatabaseManager.cpp" />
     <ClCompile Include="Examen.cpp" />
     <ClCompile Include="Examens.cpp" />
+    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Prelevement.cpp" />
     <ClCompile Include="Technicien.cpp" />
@@ -162,6 +163,7 @@
     <ClInclude Include="DatabaseManager.h" />
     <ClInclude Include="Examen.h" />
     <ClInclude Include="Examens.h" />
+    <ClInclude Include="Logger.h" />
     <ClInclude Include="Prelevement.h" />
     <ClInclude Include="Technicien.h" />
     <ClInclude Include="textBuffer.h" />

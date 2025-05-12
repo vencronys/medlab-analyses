@@ -67,7 +67,7 @@ int main(int argc, char** argv)
 		Analyzer::generateAndInsertAnalyses(technicien, prelevement, dbManager);
 
 		// Display exams for the prelevement
-		//prelevement.getExamens().display();
+		//prelevement.getExamens().display(); // was doing it for debuging, trust me bro, this is not chatgpt :)
 
 	}
 	catch (sql::SQLException& e) {

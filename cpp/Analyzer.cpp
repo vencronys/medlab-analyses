@@ -225,7 +225,6 @@ void Analyzer::generateAndInsertAnalyseVitamineD(int id_prelevement, int id_exam
 }
 
 
-// A wrapper for the wrapper that takes a list of exam codes to analyse and insert each one in the database using DatabaseManager class
 void Analyzer::generateAndInsertAnalyses(Technicien technicien, Prelevement prelevement, DatabaseManager& dbManager) {
 	for (int i = 0; i < prelevement.getExamens().getSize(); ++i) {
 		if (prelevement.getExamens()[i].getCode() == std::string("GEN")) {

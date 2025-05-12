@@ -1,12 +1,9 @@
-
 package main.ma.medlab.model;
 
 import main.ma.medlab.enums.Statut;
 
-/**
- * Represents a technician in the MedLab system.
- * This class maps to the 'technicien' table in the database.
- */
+import java.util.Date;
+
 public class Technicien {
     private final int id;
     private final String nom;
@@ -14,97 +11,78 @@ public class Technicien {
     private final String cin;
     private final Statut statut;
     private final Compte compte;
+    private final Date dateNaissance;
+    private final String sexe;
+    private final String adresse;
+    private final String telephone;
+    private final double salaire;
+    private final Date dateEmbauche;
 
-    /**
-     * Constructor to create a Technicien object.
-     * @param id
-     * @param nom
-     * @param prenom
-     * @param cin
-     * @param statut
-     */
-    public Technicien(int id, String nom, String prenom, String cin, Statut statut, Compte compte) {
+    public Technicien(int id, String nom, String prenom, String cin, Statut statut, Compte compte,
+                      Date dateNaissance, String sexe, String adresse, String telephone, double salaire, Date dateEmbauche) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.cin = cin;
         this.statut = statut;
         this.compte = compte;
+        this.dateNaissance = dateNaissance;
+        this.sexe = sexe;
+        this.adresse = adresse;
+        this.telephone = telephone;
+        this.salaire = salaire;
+        this.dateEmbauche = dateEmbauche;
     }
 
-    /**
-     * Constructor to create a Technicien object with only ID and name.
-     * @param id
-     * @param nom
-     */
-    public Technicien(int id, String nom) {
-        this.id = id;
-        this.nom = nom;
-        this.prenom = null;
-        this.cin = null;
-        this.statut = null;
-        this.compte = null;
-    }
-
-    /**
-     * Returns the unique identifier of this technician.
-     *
-     * @return the technician ID
-     */
+    // Getters for all attributes
     public int getId() {
         return id;
     }
 
-    /**
-     * Returns the last name of this technician.
-     *
-     * @return the last name
-     */
     public String getNom() {
         return nom;
     }
 
-    /**
-     * Returns the first name of this technician.
-     *
-     * @return the first name
-     */
     public String getPrenom() {
         return prenom;
     }
 
-    /**
-     * Returns the national identity card number of this technician.
-     *
-     * @return the national identity card number
-     */
     public String getCin() {
         return cin;
     }
 
-    /**
-     * Returns the status of this technician.
-     *
-     * @return the status
-     */
     public Statut getStatut() {
         return statut;
     }
 
-    /**
-     * Returns the account associated with this technician.
-     *
-     * @return the account
-     */
     public Compte getCompte() {
         return compte;
     }
 
-    /**
-     * Returns a string representation of this technician.
-     *
-     * @return a string representation of the technician
-     */
+    public Date getDateNaissance() {
+        return dateNaissance;
+    }
+
+    public String getSexe() {
+        return sexe;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public double getSalaire() {
+        return salaire;
+    }
+
+    public Date getDateEmbauche() {
+        return dateEmbauche;
+    }
+
     @Override
     public String toString() {
         return "Technicien{" +
@@ -114,7 +92,12 @@ public class Technicien {
                 ", cin='" + cin + '\'' +
                 ", statut=" + statut +
                 ", compte=" + compte +
+                ", dateNaissance=" + dateNaissance +
+                ", sexe='" + sexe + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", salaire=" + salaire +
+                ", dateEmbauche=" + dateEmbauche +
                 '}';
     }
-
 }

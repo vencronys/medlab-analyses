@@ -37,9 +37,9 @@ if (
     exit();
 }
 
-$query = "INSERT INTO disn1imh_v13_rdv (date_rdv, motif_rdv, id_patient, id_secretaire) VALUES (:date_rdv, :motif_rdv, :id_patient, 1)";
+$query = "INSERT INTO disn1imh_v13_rdv (date_rdv, motif_rdv, id_patient, id_secretaire) VALUES (:date_rdv, :motif_rdv, (SELECT id_patient FROM disn1imh_v13_patient WHERE id_compte = :id_compte), 1)";
 $stmt = $conn->prepare($query);
-$stmt->execute([':date_rdv' => $date_rdv, ':motif_rdv' => $motif_rdv, ':id_patient' => $_SESSION["id_compte"]]);
+$stmt->execute([':date_rdv' => $date_rdv, ':motif_rdv' => $motif_rdv, ':id_compte' => $_SESSION["id_compte"]]);
 
 // Log successful appointment booking
 $logger->log('APPOINTMENT_BOOKING', $_SESSION["id_compte"], "New appointment booked for date: $date_rdv");

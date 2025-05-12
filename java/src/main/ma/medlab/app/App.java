@@ -5,6 +5,7 @@ import main.ma.medlab.view.MainMenuView;
 import main.ma.medlab.util.LoggerUtil;
 
 import java.sql.Connection;
+import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class App {
             
         } catch (Exception e) {
             LoggerUtil.error("Failed to start application: " + e.getMessage());
-            LoggerUtil.error("Stack trace: " + e.getStackTrace());
+            LoggerUtil.error("Stack trace: " + Arrays.toString(e.getStackTrace()));
             System.err.println("Error: Unable to connect to the database!");
             System.err.println("Error details: " + e.getMessage());
             e.printStackTrace();

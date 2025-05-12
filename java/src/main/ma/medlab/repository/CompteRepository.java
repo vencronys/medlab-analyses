@@ -57,7 +57,7 @@ public class CompteRepository {
      * @throws SQLException if a database access error occurs
      */
     public Compte authenticate(String email, String password) throws SQLException {
-        String query = "SELECT * FROM compte WHERE email_compte like ? AND mot_de_passe_compte like ?";
+        String query = "SELECT * FROM disn1imh_v13_compte WHERE email_compte like ? AND mot_de_passe_compte like ? AND statut_compte like 'ACTIF'";
         LoggerUtil.info("Attempting authentication for email: " + email);
 
         try (Connection conn = DatabaseConfig.getConnection();

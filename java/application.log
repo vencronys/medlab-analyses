@@ -42,3 +42,223 @@
 [2025-04-30 22:00:03] INFO: Closing database connection...
 [2025-04-30 22:00:03] INFO: Database connection closed successfully
 [2025-04-30 22:00:03] INFO: Application shutdown complete
+[2025-05-12 02:03:05] INFO: Starting MedLab application...
+[2025-05-12 02:03:05] INFO: Attempting to establish database connection
+[2025-05-12 02:03:05] INFO: Initializing database connection...
+[2025-05-12 02:03:06] INFO: Database connection established successfully
+[2025-05-12 02:03:06] INFO: Database connection successful
+[2025-05-12 02:03:06] INFO: Initializing main menu
+[2025-05-12 02:03:06] INFO: Displaying main menu
+[2025-05-12 02:03:47] INFO: Attempting authentication for email: tech.cpp@system.local
+[2025-05-12 02:03:47] INFO: Reusing existing database connection
+[2025-05-12 02:03:47] INFO: Authentication successful for email: tech.cpp@system.local
+[2025-05-12 02:03:47] INFO: Displaying Technicien Menu
+[2025-05-12 02:03:48] INFO: Technicien selected option: 1
+[2025-05-12 02:03:48] INFO: Attempting to view the profile
+[2025-05-12 02:03:53] INFO: Technicien selected option: 2
+[2025-05-12 02:03:53] INFO: Attempting to check blood samples
+[2025-05-12 02:03:55] INFO: Technicien selected option: 3
+[2025-05-12 02:03:55] INFO: Technicien logging out
+[2025-05-12 02:03:57] INFO: Application shutdown initiated
+[2025-05-12 02:03:57] INFO: Closing database connection...
+[2025-05-12 02:03:57] INFO: Database connection closed successfully
+[2025-05-12 02:03:57] INFO: Application shutdown complete
+[2025-05-12 02:04:40] INFO: Starting MedLab application...
+[2025-05-12 02:04:40] INFO: Attempting to establish database connection
+[2025-05-12 02:04:40] INFO: Initializing database connection...
+[2025-05-12 02:04:41] INFO: Database connection established successfully
+[2025-05-12 02:04:41] INFO: Database connection successful
+[2025-05-12 02:04:41] INFO: Initializing main menu
+[2025-05-12 02:04:41] INFO: Displaying main menu
+[2025-05-12 02:04:46] INFO: Attempting authentication for email: tech.cpp1@system.local
+[2025-05-12 02:04:46] INFO: Reusing existing database connection
+[2025-05-12 02:04:46] INFO: Authentication successful for email: tech.cpp1@system.local
+[2025-05-12 02:04:46] INFO: Displaying ChefTechnicien Menu
+[2025-05-12 02:04:48] INFO: Technicien selected option: 1
+[2025-05-12 02:04:48] INFO: Attempting to view the profile
+[2025-05-12 02:04:58] INFO: Technicien selected option: 3
+[2025-05-12 02:04:58] INFO: ChefTechnicien logging out
+[2025-05-12 02:04:59] INFO: Application shutdown initiated
+[2025-05-12 02:04:59] INFO: Closing database connection...
+[2025-05-12 02:04:59] INFO: Database connection closed successfully
+[2025-05-12 02:04:59] INFO: Application shutdown complete
+[2025-05-12 02:10:36] INFO: Starting MedLab application...
+[2025-05-12 02:10:36] INFO: Attempting to establish database connection
+[2025-05-12 02:10:36] INFO: Initializing database connection...
+[2025-05-12 02:10:37] INFO: Database connection established successfully
+[2025-05-12 02:10:37] INFO: Database connection successful
+[2025-05-12 02:10:37] INFO: Initializing main menu
+[2025-05-12 02:10:37] INFO: Displaying main menu
+[2025-05-12 02:10:45] INFO: Application shutdown initiated
+[2025-05-12 02:10:45] INFO: Closing database connection...
+[2025-05-12 02:10:45] INFO: Database connection closed successfully
+[2025-05-12 02:10:45] INFO: Application shutdown complete
+[2025-05-12 02:11:01] INFO: Starting MedLab application...
+[2025-05-12 02:11:01] INFO: Attempting to establish database connection
+[2025-05-12 02:11:01] INFO: Initializing database connection...
+[2025-05-12 02:11:02] INFO: Database connection established successfully
+[2025-05-12 02:11:02] INFO: Database connection successful
+[2025-05-12 02:11:02] INFO: Initializing main menu
+[2025-05-12 02:11:02] INFO: Displaying main menu
+[2025-05-12 02:11:40] INFO: Attempting authentication for email: tech.cpp1@system.local
+[2025-05-12 02:11:40] INFO: Reusing existing database connection
+[2025-05-12 02:11:40] INFO: Authentication successful for email: tech.cpp1@system.local
+[2025-05-12 02:11:40] INFO: Displaying ChefTechnicien Menu
+[2025-05-12 02:12:14] INFO: Technicien selected option: 3
+[2025-05-12 02:12:14] INFO: ChefTechnicien logging out
+[2025-05-12 02:12:37] INFO: Attempting authentication for email: tech.cpp1@system.local
+[2025-05-12 02:12:37] INFO: Initializing database connection...
+[2025-05-12 02:12:37] INFO: Database connection established successfully
+[2025-05-12 02:12:37] INFO: Authentication successful for email: tech.cpp1@system.local
+[2025-05-12 02:12:37] INFO: Displaying ChefTechnicien Menu
+[2025-05-12 02:12:43] INFO: Technicien selected option: 3
+[2025-05-12 02:12:43] INFO: ChefTechnicien logging out
+[2025-05-12 02:12:43] INFO: Application shutdown initiated
+[2025-05-12 02:12:43] INFO: Closing database connection...
+[2025-05-12 02:12:43] INFO: Database connection closed successfully
+[2025-05-12 02:12:43] INFO: Application shutdown complete
+[2025-05-12 02:12:47] INFO: Starting MedLab application...
+[2025-05-12 02:12:47] INFO: Attempting to establish database connection
+[2025-05-12 02:12:47] INFO: Initializing database connection...
+[2025-05-12 02:12:48] INFO: Database connection established successfully
+[2025-05-12 02:12:48] INFO: Database connection successful
+[2025-05-12 02:12:48] INFO: Initializing main menu
+[2025-05-12 02:12:48] INFO: Displaying main menu
+[2025-05-12 02:12:52] INFO: Attempting authentication for email: tech.cpp1@system.local
+[2025-05-12 02:12:52] INFO: Reusing existing database connection
+[2025-05-12 02:12:52] INFO: Authentication successful for email: tech.cpp1@system.local
+[2025-05-12 02:12:52] INFO: Displaying ChefTechnicien Menu
+[2025-05-12 02:13:32] INFO: Technicien selected option: 2
+[2025-05-12 02:13:32] INFO: Attempting to view tasks
+[2025-05-12 02:13:35] INFO: Technicien selected option: 1
+[2025-05-12 02:13:35] INFO: Attempting to view the profile
+[2025-05-12 02:19:14] INFO: Technicien selected option: 3
+[2025-05-12 02:19:14] INFO: ChefTechnicien logging out
+[2025-05-12 02:19:20] INFO: Attempting authentication for email: chef1@lab.local
+[2025-05-12 02:19:20] INFO: Initializing database connection...
+[2025-05-12 02:19:20] INFO: Database connection established successfully
+[2025-05-12 02:19:20] INFO: Authentication successful for email: chef1@lab.local
+[2025-05-12 02:19:20] INFO: Displaying ChefTechnicien Menu
+[2025-05-12 02:19:21] INFO: Technicien selected option: 1
+[2025-05-12 02:19:21] INFO: Attempting to view the profile
+[2025-05-12 02:20:33] INFO: Starting MedLab application...
+[2025-05-12 02:20:33] INFO: Attempting to establish database connection
+[2025-05-12 02:20:33] INFO: Initializing database connection...
+[2025-05-12 02:20:33] INFO: Database connection established successfully
+[2025-05-12 02:20:33] INFO: Database connection successful
+[2025-05-12 02:20:33] INFO: Initializing main menu
+[2025-05-12 02:20:33] INFO: Displaying main menu
+[2025-05-12 02:20:44] INFO: Attempting authentication for email: chef1@lab.local
+[2025-05-12 02:20:44] INFO: Reusing existing database connection
+[2025-05-12 02:20:44] INFO: Authentication successful for email: chef1@lab.local
+[2025-05-12 02:20:44] INFO: Displaying ChefTechnicien Menu
+[2025-05-12 02:20:45] INFO: Technicien selected option: 1
+[2025-05-12 02:20:45] INFO: Attempting to view the profile
+[2025-05-12 02:20:45] INFO: Attempting to view the profile
+[2025-05-12 02:35:42] INFO: Starting MedLab application...
+[2025-05-12 02:35:42] INFO: Attempting to establish database connection
+[2025-05-12 02:35:42] INFO: Initializing database connection...
+[2025-05-12 02:35:43] INFO: Database connection established successfully
+[2025-05-12 02:35:43] INFO: Database connection successful
+[2025-05-12 02:35:43] INFO: Initializing main menu
+[2025-05-12 02:35:43] INFO: Displaying main menu
+[2025-05-12 02:35:52] INFO: Attempting authentication for email: chef1@lab.local
+[2025-05-12 02:35:52] INFO: Reusing existing database connection
+[2025-05-12 02:35:52] INFO: Authentication successful for email: chef1@lab.local
+[2025-05-12 02:35:52] INFO: Initializing database connection...
+[2025-05-12 02:35:52] INFO: Database connection established successfully
+[2025-05-12 02:35:52] INFO: Displaying ChefTechnicien Menu
+[2025-05-12 02:35:53] INFO: Technicien selected option: 1
+[2025-05-12 02:35:53] INFO: Attempting to view the profile
+[2025-05-12 02:39:25] INFO: Starting MedLab application...
+[2025-05-12 02:39:25] INFO: Attempting to establish database connection
+[2025-05-12 02:39:25] INFO: Initializing database connection...
+[2025-05-12 02:39:26] INFO: Database connection established successfully
+[2025-05-12 02:39:26] INFO: Database connection successful
+[2025-05-12 02:39:26] INFO: Initializing main menu
+[2025-05-12 02:39:26] INFO: Displaying main menu
+[2025-05-12 02:39:45] INFO: Attempting authentication for email: tech.cpp@system.local
+[2025-05-12 02:39:45] INFO: Reusing existing database connection
+[2025-05-12 02:39:45] INFO: Authentication successful for email: tech.cpp@system.local
+[2025-05-12 02:39:45] INFO: Displaying Technicien Menu
+[2025-05-12 02:39:46] INFO: Technicien selected option: 1
+[2025-05-12 02:39:46] INFO: Attempting to view the profile
+[2025-05-12 02:43:06] INFO: Starting MedLab application...
+[2025-05-12 02:43:06] INFO: Attempting to establish database connection
+[2025-05-12 02:43:06] INFO: Initializing database connection...
+[2025-05-12 02:43:07] INFO: Database connection established successfully
+[2025-05-12 02:43:07] INFO: Database connection successful
+[2025-05-12 02:43:07] INFO: Initializing main menu
+[2025-05-12 02:43:07] INFO: Displaying main menu
+[2025-05-12 02:43:20] INFO: Attempting authentication for email: tech.cpp@system.local
+[2025-05-12 02:43:20] INFO: Reusing existing database connection
+[2025-05-12 02:43:20] INFO: Authentication successful for email: tech.cpp@system.local
+[2025-05-12 02:43:20] INFO: Initializing database connection...
+[2025-05-12 02:43:20] INFO: Database connection established successfully
+[2025-05-12 02:43:20] INFO: Displaying Technicien Menu
+[2025-05-12 02:43:23] INFO: Technicien selected option: 1
+[2025-05-12 02:43:23] INFO: Attempting to view the profile
+[2025-05-12 02:43:48] INFO: Technicien selected option: 3
+[2025-05-12 02:43:48] INFO: Technicien logging out
+[2025-05-12 02:43:50] INFO: Application shutdown initiated
+[2025-05-12 02:43:50] INFO: Closing database connection...
+[2025-05-12 02:43:50] INFO: Database connection closed successfully
+[2025-05-12 02:43:50] INFO: Application shutdown complete
+[2025-05-12 02:46:57] INFO: Starting MedLab application...
+[2025-05-12 02:46:57] INFO: Attempting to establish database connection
+[2025-05-12 02:46:57] INFO: Initializing database connection...
+[2025-05-12 02:46:57] INFO: Database connection established successfully
+[2025-05-12 02:46:57] INFO: Database connection successful
+[2025-05-12 02:46:57] INFO: Initializing main menu
+[2025-05-12 02:46:57] INFO: Displaying main menu
+[2025-05-12 02:47:02] INFO: Attempting authentication for email: tech.cpp@system.local
+[2025-05-12 02:47:02] INFO: Reusing existing database connection
+[2025-05-12 02:47:02] INFO: Authentication successful for email: tech.cpp@system.local
+[2025-05-12 02:47:02] INFO: Initializing database connection...
+[2025-05-12 02:47:02] INFO: Database connection established successfully
+[2025-05-12 02:47:02] INFO: Displaying Technicien Menu
+[2025-05-12 02:47:03] INFO: Technicien selected option: 1
+[2025-05-12 02:47:03] INFO: Attempting to view the profile
+[2025-05-12 02:49:32] INFO: Technicien selected option: 
+[2025-05-12 02:49:32] WARNING: Invalid menu choice entered in Technicien view: 
+[2025-05-12 02:49:33] INFO: Technicien selected option: 2
+[2025-05-12 02:49:33] INFO: Attempting to check blood samples
+[2025-05-12 02:49:35] INFO: Technicien selected option: 3
+[2025-05-12 02:49:35] INFO: Technicien logging out
+[2025-05-12 02:49:37] INFO: Application shutdown initiated
+[2025-05-12 02:49:37] INFO: Closing database connection...
+[2025-05-12 02:49:37] INFO: Database connection closed successfully
+[2025-05-12 02:49:37] INFO: Application shutdown complete
+[2025-05-12 02:50:01] INFO: Starting MedLab application...
+[2025-05-12 02:50:01] INFO: Attempting to establish database connection
+[2025-05-12 02:50:01] INFO: Initializing database connection...
+[2025-05-12 02:50:01] INFO: Database connection established successfully
+[2025-05-12 02:50:01] INFO: Database connection successful
+[2025-05-12 02:50:01] INFO: Initializing main menu
+[2025-05-12 02:50:01] INFO: Displaying main menu
+[2025-05-12 02:50:05] INFO: Attempting authentication for email: CREATE TABLE `disn1imh_v13_prelevement_examen` (
+[2025-05-12 02:50:05] INFO: Reusing existing database connection
+[2025-05-12 02:50:05] INFO: Authentication failed for email: CREATE TABLE `disn1imh_v13_prelevement_examen` (
+[2025-05-12 02:50:16] INFO: Starting MedLab application...
+[2025-05-12 02:50:16] INFO: Attempting to establish database connection
+[2025-05-12 02:50:16] INFO: Initializing database connection...
+[2025-05-12 02:50:16] INFO: Database connection established successfully
+[2025-05-12 02:50:16] INFO: Database connection successful
+[2025-05-12 02:50:16] INFO: Initializing main menu
+[2025-05-12 02:50:16] INFO: Displaying main menu
+[2025-05-12 02:50:26] INFO: Attempting authentication for email: tech.cpp@system.local
+[2025-05-12 02:50:26] INFO: Reusing existing database connection
+[2025-05-12 02:50:26] INFO: Authentication successful for email: tech.cpp@system.local
+[2025-05-12 02:50:26] INFO: Initializing database connection...
+[2025-05-12 02:50:26] INFO: Database connection established successfully
+[2025-05-12 02:50:26] INFO: Displaying Technicien Menu
+[2025-05-12 02:50:28] INFO: Technicien selected option: 2
+[2025-05-12 02:50:28] INFO: Attempting to view prelevements
+[2025-05-12 02:50:28] INFO: Initializing database connection...
+[2025-05-12 02:50:28] INFO: Database connection established successfully
+[2025-05-12 02:51:50] INFO: Technicien selected option: 3
+[2025-05-12 02:51:50] INFO: Technicien logging out
+[2025-05-12 02:51:52] INFO: Application shutdown initiated
+[2025-05-12 02:51:52] INFO: Closing database connection...
+[2025-05-12 02:51:52] INFO: Database connection closed successfully
+[2025-05-12 02:51:52] INFO: Application shutdown complete

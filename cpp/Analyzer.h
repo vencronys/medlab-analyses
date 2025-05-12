@@ -28,7 +28,8 @@ public:
 	static void generateAndInsertAnalyseHemoglobine(int id_prelevement, int id_examen, int id_technicien, DatabaseManager& dbManager);
 	static void generateAndInsertAnalyseVitamineD(int id_prelevement, int id_examen, int id_technicien, DatabaseManager& dbManager);
 
-	// A wrapper for the wrapper that takes a list of exam codes to analyse and insert each one in the database using DatabaseManager class
+	// A wrapper methode from the wrapper class that wrap a wrapper that takes a list of exam codes to analyse and insert each one in
+	// the database using DatabaseManager class
 	static void generateAndInsertAnalyses(Technicien technicien, Prelevement prelevement, DatabaseManager& dbManager);
 
 private:
