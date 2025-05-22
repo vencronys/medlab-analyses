@@ -1,13 +1,12 @@
 <?php
-session_start();
+require ('header.php');
 
-if (isset($_SESSION['medecin_id'])) {
+if (!isset($_SESSION['user'])) {
     header('Location: /medlab-analyses/www/internal/auth/login.php');
     exit();
 }
 
-// $medecin_id = $_SESSION['medecin_id'];
-$medecin_id = 1;
+$medecin_id = $_SESSION['user']['id'];
 
 require_once ('../../includes/database.php');
 
@@ -28,6 +27,8 @@ try {
     echo "Erreur : " . $e->getMessage();
     exit();
 }
+
+
 ?>
 
 <!DOCTYPE html>

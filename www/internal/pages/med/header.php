@@ -24,15 +24,18 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/medlab-analyses/www/internal/pages/infirmier/dashboard.php">Tableau de bord</a>
+                    <a class="nav-link" href="/medlab-analyses/www/internal/pages/med/dashboard.php">Tableau de bord</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/medlab-analyses/www/internal/pages/infirmier/liste-prelevement.php">Prélèvements</a>
+                    <a class="nav-link" href="/medlab-analyses/www/internal/pages/med/liste-personnel.php">Personnel</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/medlab-analyses/www/internal/pages/infirmier/ajouter-prelevement.php">Nouveau prélèvement</a>
+                    <a class="nav-link" href="/medlab-analyses/www/internal/pages/med/ajouter-personnel.php">Nouveau Personnel</a>
                 </li>
             </ul>
+            <div class="d-flex">
+                <a href="/medlab-analyses/www/internal/pages/med/profile.php" class="btn btn-light" style="margin-right: 10px;">Profile</a>
+            </div>
             <div class="d-flex">
                 <a href="/medlab-analyses/www/internal/auth/logout.php" class="btn btn-light">Déconnexion</a>
             </div>

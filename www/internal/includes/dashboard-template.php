@@ -5,8 +5,8 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
-$role = $_SESSION['user']['role'];
-$username = $_SESSION['user']['username'];
+$role = $_SESSION['user']['privilege'];
+$username = $_SESSION['user']['email'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

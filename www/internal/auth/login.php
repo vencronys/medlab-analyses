@@ -55,8 +55,8 @@ if ($result) {
 
     switch ($result['privilege_compte']) {
         case 'ADMIN':
-            $table = "disn1imh_v13_medecin_generale";
-            $colonne = "id_medecin_generale";
+            $table = "disn1imh_v13_medecin_biologiste";
+            $colonne = "id_medecin_biologiste";
             $dir = "med";
             break;
         case 'INFIRMIER':
