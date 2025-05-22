@@ -10,9 +10,8 @@ public:
 	AnalyseGlucose(int id, const TextBuffer& interpretation, const TextBuffer& commentaire,
 		Statut statut, const TextBuffer& date, int id_prelevement, int id_examen,
 		int id_technicien, int id_chef_technicien, int id_medecin_biologiste, float glucose, const TextBuffer& glucoseUnite);
-	// Getters
 	float getGlucose() const;
 	TextBuffer getGlucoseUnite() const;
-	void display() const;
+	virtual void display() const;
 };
 

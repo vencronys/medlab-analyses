@@ -17,13 +17,12 @@ public:
 		Statut statut, const TextBuffer& date, int id_prelevement, int id_examen,
 		int id_technicien, int id_chef_technicien, int id_medecin_biologiste, float globulesRouges, const TextBuffer& globulesRougesUnite,
 		float globulesBlancs, const TextBuffer& globulesBlancsUnite, float plaquettes, const TextBuffer& plaquettesUnite);
-	// Getters
 	float getGlobulesRouges() const;
 	TextBuffer getGlobulesRougesUnite() const;
 	float getGlobulesBlancs() const;
 	TextBuffer getGlobulesBlancsUnite() const;
 	float getPlaquettes() const;
 	TextBuffer getPlaquettesUnite() const;
-	void display() const;
+	virtual void display() const;
 };
 

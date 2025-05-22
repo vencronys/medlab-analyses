@@ -11,14 +11,13 @@
 
 class Analyzer {
 public:
-	// Generate results for an analyse
 	static AnalyseGenerale generateAnalyseGenerale(int id_prelevement, int id_examen, int id_technicien);
 	static AnalyseCholesterol generateAnalyseCholesterol(int id_prelevement, int id_examen, int id_technicien);
 	static AnalyseGlucose generateAnalyseGlucose(int id_prelevement, int id_examen, int id_technicien);
 	static AnalyseHemoglobine generateAnalyseHemoglobine(int id_prelevement, int id_examen, int id_technicien);
 	static AnalyseVitamineD generateAnalyseVitamineD(int id_prelevement, int id_examen, int id_technicien);
 
-	// A wrapper for all the functions based on the exam code
+	// I don't think I need this one, but I will leave it here for now
 	static Analyse* generateAnalyse(int id_prelevement, int id_examen, int id_technicien, const std::string& code_examen);
 
 	// A wrapper to generate and insert an analyse

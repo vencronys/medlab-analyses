@@ -11,6 +11,7 @@ Examens::Examens(const Examens& other) {
 	m_examens = new Examen * [m_size];
 	for (int i = 0; i < m_size; ++i) {
 		m_examens[i] = new Examen(other.m_examens[i][0]);
+		m_nextPos++;
 	}
 }
 Examens::~Examens() {

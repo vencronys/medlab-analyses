@@ -4,7 +4,6 @@
 class Analyse
 {
 public:
-	// Enum for the status
 	enum class Statut {
 		EN_ATTENTE,
 		EFFECTUEE,
@@ -27,7 +26,6 @@ public:
     Analyse(int id, const TextBuffer& interpretation, const TextBuffer& commentaire,
        Statut statut, const TextBuffer& date, int id_prelevement, int id_examen, 
        int id_technicien, int id_chef_technicien, int id_medecin_biologiste);
-	// Getters
 	int getId() const;
 	TextBuffer getInterpretation() const;
 	TextBuffer getCommentaire() const;
@@ -38,9 +36,8 @@ public:
 	int getIdTechnicien() const;
 	int getIdChefTechnicien() const;
 	int getIdMedecinBiologiste() const;
-	// Setters
 	void setStatut(Statut newStatut);
 
-	void display() const;
+	virtual void display() const = 0;
 
 };

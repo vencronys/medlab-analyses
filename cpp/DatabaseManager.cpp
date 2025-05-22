@@ -2,7 +2,6 @@
 #include "DatabaseManager.h"
 #include "Logger.h"
 
-// Constructor: Establish a connection to the database
 DatabaseManager::DatabaseManager(const std::string& host, const std::string& user, const std::string& password, const std::string& schema) {
 	Logger logger("application.log");
 	try {
@@ -18,12 +17,10 @@ DatabaseManager::DatabaseManager(const std::string& host, const std::string& use
 	}
 }
 
-// Destructor: Clean up the connection
 DatabaseManager::~DatabaseManager() {
 	delete m_connection;
 }
 
-// Execute a query and return the result set
 sql::ResultSet* DatabaseManager::executeQuery(const std::string& query) {
 	Logger logger("application.log");
 	try {
@@ -38,7 +35,6 @@ sql::ResultSet* DatabaseManager::executeQuery(const std::string& query) {
 	}
 }
 
-// Execute an update query
 void DatabaseManager::executeUpdate(const std::string& query) {
 	Logger logger("application.log");
 	try {
@@ -54,26 +50,28 @@ void DatabaseManager::executeUpdate(const std::string& query) {
 	}
 }
 
-// Check if a technician exists or you can call it auth :)
 bool DatabaseManager::verifyTechnician(const std::string& email, const std::string& password, int& technicianId) {
 	Logger logger("application.log");
+	
 	std::string query = "SELECT t.id_technicien "
 		"FROM disn1imh_v13_technicien t "
 		"INNER JOIN disn1imh_v13_compte c ON t.id_compte = c.id_compte "
-		"WHERE c.email_compte = '" + email + "' AND c.mot_de_passe_compte = '" + password + "' AND c.statut_compte = 'ACTIF'";
+		"WHERE c.email_compte = '" + email + "' AND c.mot_de_passe_compte = '" + password + "' AND c.statut_compte = 'ACTIF'"
+		"AND c.privilege_compte = 'TECHNICIEN'";
 	sql::ResultSet* res = executeQuery(query);
+	
 	if (res->next()) {
 		technicianId = res->getInt("id_technicien");
 		delete res;
 		logger.log("Technician login successful. ID: " + std::to_string(technicianId), Logger::LogLevel::INFO);
 		return true;
 	}
+	
 	delete res;
 	logger.log("Login failed: Invalid email or password, or account is not active.", Logger::LogLevel::WARNING);
 	return false;
 }
 
-// Retrieve available exams for a prelevement
 sql::ResultSet* DatabaseManager::getAvailableExams(int prelevementId) {
 	Logger logger("application.log");
 	std::string query = "SELECT e.id_examen, e.code_examen "

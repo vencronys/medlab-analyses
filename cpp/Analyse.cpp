@@ -14,7 +14,6 @@ Analyse::Analyse(int id, const TextBuffer& interpretation, const TextBuffer& com
 	m_id_chef_technicien = id_chef_technicien;
 	m_id_medecin_biologiste = id_medecin_biologiste;
 }
-// Getters
 int Analyse::getId() const { return m_id; }
 TextBuffer Analyse::getInterpretation() const { return m_interpretation; }
 TextBuffer Analyse::getCommentaire() const { return m_commentaire; }
@@ -25,7 +24,7 @@ int Analyse::getIdExamen() const { return m_id_examen; }
 int Analyse::getIdTechnicien() const { return m_id_technicien; }
 int Analyse::getIdChefTechnicien() const { return m_id_chef_technicien; }
 int Analyse::getIdMedecinBiologiste() const { return m_id_medecin_biologiste; }
-// Setters
+
 void Analyse::setStatut(Statut newStatut) { m_statut = newStatut; }
 
 void Analyse::display() const {

@@ -33,16 +33,13 @@ int main(int argc, char** argv)
 
 	std::string email = argv[1];
 	std::string password = argv[2];
-	// Create a Prelevement object
 	Prelevement prelevement(std::stoi(argv[3]), std::stoi(argv[4]));
 
 	try {
 		logger.log("Connecting to database", Logger::LogLevel::INFO);
-		// Initialize the DatabaseManager
 		DatabaseManager dbManager("tcp://localhost:3306", "root", "root", "disn1imh_v13_ma");
 		logger.log("Database connection established", Logger::LogLevel::INFO);
 
-		// Verify technician login
 		int id_technicien;
 		if (!dbManager.verifyTechnician(email, password, id_technicien)) {
 			std::cerr << "Login failed: Invalid email or password, or account is not active." << std::endl;
@@ -54,7 +51,6 @@ int main(int argc, char** argv)
 		logger.log("Technician logged in successfully. ID: " + std::to_string(technicien.getId()), Logger::LogLevel::INFO);
 
 
-		// Retrieve available exams for the prelevement
 		sql::ResultSet* res = dbManager.getAvailableExams(prelevement.getId());
 		while (res->next()) {
 			int examId = res->getInt("id_examen");
@@ -63,10 +59,8 @@ int main(int argc, char** argv)
 		}
 		delete res;
 
-		// Generate and insert analyse data in the database
 		Analyzer::generateAndInsertAnalyses(technicien, prelevement, dbManager);
 
-		// Display exams for the prelevement
 		//prelevement.getExamens().display(); // was doing it for debuging, trust me bro, this is not chatgpt :)
 
 	}
@@ -90,8 +84,6 @@ int main(int argc, char** argv)
 	//Prelevement prelevement(std::stoi(argv[3]), std::stoi(argv[4]));
 
 
-	////display data:
-
 	////std::cout << email << NEW_LINE;
 	////std::cout << password << NEW_LINE;
 	////std::cout << prelevement.getId() << NEW_LINE;
@@ -109,7 +101,6 @@ int main(int argc, char** argv)
 	//	sql::Statement* stmt;
 	//	stmt = con->createStatement();
 
-	//	// SQL query to verify technician login
 	//	string selectDataSQL = "SELECT t.id_technicien "
 	//		"FROM disn1imh_v13_technicien t "
 	//		"INNER JOIN disn1imh_v13_compte c ON t.id_compte = c.id_compte "
@@ -117,7 +108,6 @@ int main(int argc, char** argv)
 
 	//	sql::ResultSet* res = stmt->executeQuery(selectDataSQL);
 
-	//	// Check if technician exists
 	//	if (!res->next()) {
 	//		std::cerr << "Login failed: Invalid email or password, or account is not active." << std::endl;
 	//		delete res;
@@ -126,23 +116,19 @@ int main(int argc, char** argv)
 	//		return 1; // Exit main with error code
 	//	}
 
-	//	// Technician login successful
 	//	int technicianId = res->getInt("id_technicien");
 	//	std::cout << "Technician logged in successfully. ID: " << technicianId << std::endl;
 
-	//	// SQL query to retrieve data from the table
 	//	selectDataSQL = "SELECT e.id_examen, e.code_examen FROM disn1imh_v13_examen e WHERE e.statut_examen like 'DISPONIBLE'";
 
 	//	res = stmt->executeQuery(selectDataSQL);
 
-	//	// Loop through the result set and display data
 	//	count = 0;
 	//	//while (res->next()) {
 	//	//	cout << " id_examen " << ": " << res->getString("id_examen") << endl;
 	//	//	cout << " code_examen " << ": "<< res->getString("code_examen") << endl;
 	//	//}
 
-	//	// SQL query to retrieve data from the table
 	//	selectDataSQL = "SELECT e.id_examen, e.code_examen "
 	//		"FROM disn1imh_v13_prelevement p "
 	//		"INNER JOIN disn1imh_v13_prelevement_examen pe ON p.id_prelevement = pe.id_prelevement "
@@ -151,7 +137,6 @@ int main(int argc, char** argv)
 
 	//	res = stmt->executeQuery(selectDataSQL);
 
-	//	// Loop through the result set and display data
 	//	count = 0;
 	//	while (res->next()) {
 	//		cout << " id_examen " << ": " << res->getString("id_examen") << endl;
