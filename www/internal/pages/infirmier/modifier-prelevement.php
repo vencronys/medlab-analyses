@@ -5,14 +5,14 @@ require_once '../../includes/database.php';
 $id_prelevement = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
 // Get prélèvement
-$stmt = $pdo->prepare("
+$stmt = $conn->prepare("
     SELECT p.*, pat.nom_patient, pat.prenom_patient
     FROM DISN1IMH_V13_prelevement p
     JOIN DISN1IMH_V13_patient pat ON p.id_patient = pat.id_patient
     WHERE p.id_prelevement = ?
     AND p.id_infirmier = ?
 ");
-$stmt->execute([$id_prelevement, $_SESSION['user_id']]);
+$stmt->execute([$id_prelevement, $_SESSION['user']['id']]);
 $prelevement = $stmt->fetch();
 
 if (!$prelevement) {
@@ -21,7 +21,7 @@ if (!$prelevement) {
 }
 
 // Get associated examens
-$stmt = $pdo->prepare("
+$stmt = $conn->prepare("
     SELECT e.id_examen
     FROM DISN1IMH_V13_prelevement_examen pe
     JOIN DISN1IMH_V13_examen e ON pe.id_examen = e.id_examen
@@ -32,10 +32,10 @@ $prelevement_examens = array_column($stmt->fetchAll(), 'id_examen');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
-        $pdo->beginTransaction();
+        $conn->beginTransaction();
 
         // Update prélèvement
-        $stmt = $pdo->prepare("
+        $stmt = $conn->prepare("
             UPDATE DISN1IMH_V13_prelevement
             SET volume_ml = ?,
                 date_prelevement = ?,
@@ -49,15 +49,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_POST['date_prelevement'],
             $_POST['statut_prelevement'],
             $id_prelevement,
-            $_SESSION['user_id']
+            $_SESSION['user']['id']
         ]);
 
         // Update examens
-        $stmt = $pdo->prepare("DELETE FROM DISN1IMH_V13_prelevement_examen WHERE id_prelevement = ?");
+        $stmt = $conn->prepare("DELETE FROM DISN1IMH_V13_prelevement_examen WHERE id_prelevement = ?");
         $stmt->execute([$id_prelevement]);
 
         if (!empty($_POST['examens'])) {
-            $stmt = $pdo->prepare("
+            $stmt = $conn->prepare("
                 INSERT INTO DISN1IMH_V13_prelevement_examen 
                 (id_prelevement, id_examen) VALUES (?, ?)
             ");
@@ -67,18 +67,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        $pdo->commit();
+        $conn->commit();
         header('Location: liste-prelevement.php?success=1');
         exit();
 
     } catch (Exception $e) {
-        $pdo->rollBack();
+        $conn->rollBack();
         $error = "Une erreur est survenue lors de la modification du prélèvement.";
     }
 }
 
 // Get examens list
-$stmt = $pdo->query("
+$stmt = $conn->query("
     SELECT id_examen, nom_examen, code_examen
     FROM DISN1IMH_V13_examen
     WHERE statut_examen = 'DISPONIBLE'

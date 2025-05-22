@@ -1,41 +1,87 @@
 <?php
 session_start();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-    $password = $_POST['password'];
+if (isset($_SESSION['user'])) {
+    header("Location: ../index.php");
+    exit();
+}
 
-    // For demonstration purposes, we'll use a simple array of users
-    // In a real application, you would use a database and proper password hashing
-    $users = [
-        'admin' => [
-            'password' => 'admin123',
-            'role' => 'admin'
-        ],
-        'doctor' => [
-            'password' => 'doctor123',
-            'role' => 'med'
-        ],
-        'secretary' => [
-            'password' => 'secretary123',
-            'role' => 'secretaire'
-        ]
+require_once("../includes/database.php");
+
+if (!isset($_POST['email']) || !isset($_POST['password'])) {
+    header("Location: ../index.php");
+    exit();
+}
+
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+if (empty($email) || empty($password)) {
+    $error = "Veuillez remplir tous les champs.";
+    header("Location: ../index.php?error=" . $error);
+    exit();
+}
+
+if (!preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $email)) {
+    $error = "Veuillez entrer une adresse email valide.";
+    header("Location: ../index.php?error=" . $error);
+    exit();
+}
+
+if (strlen($password) < 3) {
+    $error = "Le mot de passe doit contenir au moins 3 caractères.";
+    header("Location: ../index.php?error=" . $error);
+    exit();
+}
+
+$query = "SELECT * FROM disn1imh_v13_compte WHERE email_compte = :email AND mot_de_passe_compte = :password";
+$stmt = $conn->prepare($query);
+$stmt->execute([':email' => $email, ':password' => $password]);
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if ($result) {
+    if ($result['statut_compte'] == 'SUSPENDU') {
+        $error = "Votre compte est suspendu";
+        header("Location: ../index.php?error=" . $error);
+        exit();
+    }
+    
+    $_SESSION['user'] = [
+        'id_compte' => $result['id_compte'],
+        'email' => $result['email_compte'],
+        'privilege' => $result['privilege_compte'],
+        'status' => $result['statut_compte']
     ];
 
-    if (isset($users[$username]) && $users[$username]['password'] === $password) {
-        $_SESSION['user'] = [
-            'username' => $username,
-            'role' => $users[$username]['role']
-        ];
-        
-        // Redirect based on role
-        header("Location: ../pages/{$users[$username]['role']}/dashboard.php");
-        exit;
-    } else {
-        header('Location: ../index.php?error=1');
-        exit;
+    switch ($result['privilege_compte']) {
+        case 'ADMIN':
+            $table = "disn1imh_v13_medecin_generale";
+            $colonne = "id_medecin_generale";
+            $dir = "med";
+            break;
+        case 'INFIRMIER':
+            $table = "disn1imh_v13_infirmier";
+            $colonne = "id_infirmier";
+            $dir = "infirmier";
+            break;
+        case 'SECRETAIRE':
+            $table = "disn1imh_v13_secretaire";
+            $colonne = "id_secretaire";
+            $dir = "secretaire";
+            break;
     }
+    
+    $query = "SELECT * FROM {$table} WHERE id_compte = :id";
+    $stmt = $conn->prepare($query);
+    $stmt->execute([':id' => $result['id_compte']]);
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    $_SESSION['user']['id'] = $result[$colonne];
+
+    header("Location: ../pages/{$dir}/dashboard.php");
+    exit();
 } else {
-    header('Location: ../index.php');
-    exit;
+    $error = "Identifiants incorrects.";
+    header("Location: ../index.php?error=" . $error);
+    exit();
 }

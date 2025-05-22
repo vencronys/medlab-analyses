@@ -2,14 +2,12 @@
 require_once 'header.php';
 require_once '../../includes/database.php';
 
-// Get filters
 $status = isset($_GET['status']) ? $_GET['status'] : '';
 $date_start = isset($_GET['date_start']) ? $_GET['date_start'] : date('Y-m-d', strtotime('-7 days'));
 $date_end = isset($_GET['date_end']) ? $_GET['date_end'] : date('Y-m-d');
 
-// Build query
 $where_clauses = ['p.id_infirmier = ?'];
-$params = [$_SESSION['user_id']];
+$params = [$_SESSION['user']['id']];
 
 if ($status) {
     $where_clauses[] = 'p.statut_prelevement = ?';
@@ -29,7 +27,7 @@ $sql = "
     ORDER BY p.date_prelevement DESC
 ";
 
-$stmt = $pdo->prepare($sql);
+$stmt = $conn->prepare($sql);
 $stmt->execute($params);
 $prelevements = $stmt->fetchAll();
 ?>

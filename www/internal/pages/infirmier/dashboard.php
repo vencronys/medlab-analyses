@@ -4,7 +4,7 @@ require_once '../../includes/database.php';
 
 // Get today's prélèvements
 $today = date('Y-m-d');
-$stmt = $pdo->prepare("
+$stmt = $conn->prepare("
     SELECT p.*, pat.nom_patient, pat.prenom_patient, s.nom_stock
     FROM DISN1IMH_V13_prelevement p
     JOIN DISN1IMH_V13_patient pat ON p.id_patient = pat.id_patient
@@ -13,17 +13,17 @@ $stmt = $pdo->prepare("
     AND p.id_infirmier = ?
     ORDER BY p.date_prelevement DESC
 ");
-$stmt->execute([$today, $_SESSION['user_id']]);
+$stmt->execute([$today, $_SESSION['user']['id']]);
 $prelevements_today = $stmt->fetchAll();
 
 // Get pending prélèvements
-$stmt = $pdo->prepare("
+$stmt = $conn->prepare("
     SELECT COUNT(*) as count
     FROM DISN1IMH_V13_prelevement
     WHERE statut_prelevement = 'EN_ATTENTE'
     AND id_infirmier = ?
 ");
-$stmt->execute([$_SESSION['user_id']]);
+$stmt->execute([$_SESSION['user']['id']]);
 $pending_count = $stmt->fetch()['count'];
 ?>
 

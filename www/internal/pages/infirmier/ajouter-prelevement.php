@@ -4,9 +4,9 @@ require_once '../../includes/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
-        $pdo->beginTransaction();
+        $conn->beginTransaction();
 
-        $stmt = $pdo->prepare("
+        $stmt = $conn->prepare("
             INSERT INTO DISN1IMH_V13_prelevement 
             (volume_ml, date_prelevement, id_stock, id_patient, id_infirmier, statut_prelevement)
             VALUES (?, ?, ?, ?, ?, ?)
@@ -17,15 +17,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_POST['date_prelevement'],
             $_POST['id_stock'],
             $_POST['id_patient'],
-            $_SESSION['user_id'],
+            $_SESSION['user']['id'],
             'EN_ATTENTE'
         ]);
 
-        $id_prelevement = $pdo->lastInsertId();
+        $id_prelevement = $conn->lastInsertId();
 
-        // Insert examens associés
         if (!empty($_POST['examens'])) {
-            $stmt = $pdo->prepare("
+            $stmt = $conn->prepare("
                 INSERT INTO DISN1IMH_V13_prelevement_examen 
                 (id_prelevement, id_examen) VALUES (?, ?)
             ");
@@ -35,26 +34,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        $pdo->commit();
+        $conn->commit();
         header('Location: liste-prelevement.php?success=1');
         exit();
 
     } catch (Exception $e) {
-        $pdo->rollBack();
+        $conn->rollBack();
+        echo $e->getMessage() . "<br>";
+        
+
         $error = "Une erreur est survenue lors de l'ajout du prélèvement.";
     }
 }
 
-// Get patients list
-$stmt = $pdo->query("
+$stmt = $conn->query("
     SELECT id_patient, nom_patient, prenom_patient, cin_patient
     FROM DISN1IMH_V13_patient
     ORDER BY nom_patient, prenom_patient
 ");
 $patients = $stmt->fetchAll();
 
-// Get stock items list
-$stmt = $pdo->query("
+$stmt = $conn->query("
     SELECT id_stock, nom_stock
     FROM DISN1IMH_V13_stock
     WHERE statut_stock = 'DISPONIBLE'
@@ -62,8 +62,7 @@ $stmt = $pdo->query("
 ");
 $stocks = $stmt->fetchAll();
 
-// Get examens list
-$stmt = $pdo->query("
+$stmt = $conn->query("
     SELECT id_examen, nom_examen, code_examen
     FROM DISN1IMH_V13_examen
     WHERE statut_examen = 'DISPONIBLE'
@@ -97,9 +96,9 @@ $examens = $stmt->fetchAll();
                 </div>
 
                 <div class="col-md-6">
-                    <label class="form-label">Type de prélèvement</label>
+                    <label class="form-label">Stock</label>
                     <select name="id_stock" class="form-select" required>
-                        <option value="">Sélectionner un type</option>
+                        <option value="">Sélectionner un stock</option>
                         <?php foreach ($stocks as $s): ?>
                             <option value="<?= $s['id_stock'] ?>">
                                 <?= htmlspecialchars($s['nom_stock']) ?>

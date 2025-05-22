@@ -31,24 +31,15 @@ if (isset($_SESSION['user'])) {
                         <?php if (isset($_GET['error'])): ?>
                         <div class="alert alert-danger" role="alert">
                             <?php 
-                            $error_msg = 'An error occurred';
-                            switch($_GET['error']) {
-                                case '1':
-                                    $error_msg = 'Invalid username or password';
-                                    break;
-                                case '2':
-                                    $error_msg = 'Please login to access the system';
-                                    break;
-                            }
-                            echo htmlspecialchars($error_msg);
+                            echo htmlspecialchars($_GET['error']);
                             ?>
                         </div>
                         <?php endif; ?>
 
                         <form action="auth/login.php" method="POST">
                             <div class="mb-3">
-                                <label for="username" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" required>
+                                <label for="username" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="username" name="email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
