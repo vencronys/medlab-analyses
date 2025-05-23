@@ -1,0 +1,291 @@
+.hero {
+    background-image: url('/medlab-analyses/www/external/images/hero_lab.avif');
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    margin: 0 -180px;
+    padding: 0 180px;
+    height: 550px;
+    position: relative;
+}
+
+.hero > div > * {
+    margin: 8px 0;
+}
+
+.hero button {
+    margin-top: 24px;
+}
+
+.hero .hero-img-credits {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 8px;
+    background-color: var(--dark-bg);
+}
+
+.hero .hero-img-credits a {
+    color: var(--black);
+}
+
+.hero > div p {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.hero h2 {
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.home-page .hero-cards {
+    margin-top: -52px;
+    position: relative;
+    z-index: 1;
+    padding: 0 180px;
+}
+
+.home-page .card {
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.home-page .card:nth-of-type(1) {
+    background-color: var(--primary-color);
+}
+
+.home-page .card:nth-of-type(2) {
+    background-color: var(--accent-color);
+}
+
+.home-page .card:nth-of-type(3) {
+    background-color: var(--secondary-color);
+}
+
+.home-page .card:nth-of-type(1):hover {
+    background-color: var(--primary-color-hover);
+}
+
+.home-page .card:nth-of-type(2):hover {
+    background-color: var(--accent-color-hover);
+}
+
+.home-page .card:nth-of-type(3):hover {
+    background-color: var(--secondary-color-hover);
+}
+
+.home-page .card:nth-of-type(1) p {
+    color: var(--accent-color);
+}
+
+.home-page .card:nth-of-type(2) p {
+    color: var(--primary-color);
+}
+
+.home-page .card:nth-of-type(3) p {
+    color: var(--white);
+}
+
+.home-page .card:nth-of-type(1) i {
+    color: var(--accent-color);
+    font-size: 3.5rem;
+}
+
+.home-page .card:nth-of-type(2) i {
+    color: var(--primary-color);
+    font-size: 3.5rem;
+}
+
+.home-page .card:nth-of-type(3) i {
+    color: var(--white);
+    font-size: 3.5rem;
+}
+
+.welcome {
+    margin-top: 60px;
+    padding: 0 360px;
+}
+
+.welcome p,
+.welcome h3 {
+    text-align: center;
+}
+
+.welcome h3 {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.welcome p:first-of-type {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.welcome a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    width: fit-content;
+    margin: 32px auto 0 auto;
+}
+
+.welcome a i {
+    color: var(--primary-color);
+}
+
+.welcome-img {
+    height: 300px;
+    margin: 80px 0;
+    position: relative;
+    /* background-image: url("/medlab-analyses/www/external/images/welcome-duow.avif"); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    box-shadow: var(--shadow);
+}
+
+.welcome-img img {
+    height: 300px;
+    width: 100%;
+}
+
+.welcome-img-credits {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: var(--dark-bg);
+    padding: 8px;
+}
+
+.welcome-img-credits{
+    color: var(--black);
+    text-decoration: none;
+}
+
+.home-services-container .header p,
+.home-services-container .header h3 {
+    text-align: center;
+}
+
+.home-services-container .header p {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.home-services-container .header h3 {
+    margin-top: 8px;
+    margin-bottom: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.home-services-cards-container {
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+}
+
+.home-services-cards-container > div {
+    padding: 24px;
+}
+
+.home-services-cards-container > div:nth-child(even) {
+    background-color: var(--primary-color);
+}
+
+.home-services-cards-container > div:nth-child(even) p {
+    color: var(--accent-color);
+}
+
+.home-services-cards-container > div:nth-child(odd) i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+}
+
+.home-services-cards-container > div:nth-child(even) i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+}
+
+.home-services > div:nth-of-type(2) {
+    padding: 40px 0;
+}
+
+.home-services h4 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+.home-services > div:nth-of-type(2) > div:nth-child(1) {
+    margin-bottom: 24px;
+}    
+
+.home-services ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.home-services li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 24px;
+}
+
+.home-services li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.home-services > div:last-child > div:first-child,
+.home-services > div:last-child > div:last-child {
+    background-image: url(/medlab-analyses/www/external/images/service_1.avif);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 500px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.home-services > div:last-child > div:last-child {
+    background-image: url(/medlab-analyses/www/external/images/service_2.avif);
+    margin-top: 24px;
+}
+
+.home-services > div:last-child > div a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 8px;
+    background-color: var(--dark-bg);
+    color: var(--black);
+}
+
+.home-services > div:nth-child(2) p {
+    color: var(--dark-gray);
+}
+    

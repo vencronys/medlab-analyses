@@ -1,6 +1,6 @@
-# Labanal Project - Code Style Guide
+# MedLab Analyses Project - Code Style Guide
 
-This document provides coding standards and best practices for contributors working on the Labanal project. Following this guide ensures code consistency, readability, and maintainability.
+This document provides coding standards and best practices for contributors working on the MedLab Analyses project. Following this guide ensures code consistency, readability, and maintainability.
 
 ---
 

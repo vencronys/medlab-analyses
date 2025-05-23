@@ -1,7 +1,7 @@
-# Labanal - Laboratory Analysis Management System
+# MedLab Analyses - Laboratory Analysis Management System
 
 ## Overview
-Labanal is a management system for a medical analysis laboratory. It provides a structured solution for handling blood sample analysis, patient appointments, and staff management. The system consists of multiple components tailored for different user roles.
+MedLab Analyses is a management system for a medical analysis laboratory. It provides a structured solution for handling blood sample analysis, patient appointments, and staff management. The system consists of multiple components tailored for different user roles.
 
 ## Features
 ### External Web Application (Patients)
@@ -33,7 +33,7 @@ Labanal is a management system for a medical analysis laboratory. It provides a 
 
 ## Project Structure
 ```
-Labanal/
+medlab-analyses/
 ├── docs/        # Documentation
 ├── database/    # SQL scripts and schema
 ├── www/         # Web application (public and internal)

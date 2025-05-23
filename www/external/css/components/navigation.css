@@ -1,0 +1,14 @@
+nav {
+    background-color: var(--primary-color);
+    margin: 0 -180px;
+    padding: 18px 180px;
+}
+
+a.rdv {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+a.rdv:hover {
+    color: var(--primary-color);
+}

@@ -1,8 +1,8 @@
-# Labanal Project - Database Schema Documentation
+# MedLab Analyses Project - Database Schema Documentation
 
 ## TODO: Document stuff, this is just a sample
 
-This document outlines the structure of the database used in the Labanal project. It includes the tables, fields, relationships, and some example queries to help contributors understand and interact with the database.
+This document outlines the structure of the database used in the MedLab Analyses project. It includes the tables, fields, relationships, and some example queries to help contributors understand and interact with the database.
 
 ## Database Structure
 

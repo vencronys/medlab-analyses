@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../../assets/fonts/Inter/static/Inter_18pt-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Apply fonts globally */
+body {
+    font-family: Inter, sans-serif;
+}
+
+/* Utility classes */
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-md {
+    font-size: 1rem;
+}
+
+.text-lg {
+    font-size: 1.25rem;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 700;
+}

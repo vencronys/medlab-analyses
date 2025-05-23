@@ -1,4 +1,4 @@
-# 📌 Labanal Product Backlog
+# 📌 MedLab Analyses Product Backlog
 
 This document tracks all sprints, their due dates, and the progress of individual tasks.
 

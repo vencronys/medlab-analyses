@@ -1,0 +1,52 @@
+.btn {
+    padding: 12px 24px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-color-hover);
+}
+
+.btn:active {
+    background-color: var(--primary-color);
+}
+
+.btn:disabled {
+    background-color: var(--light-gray);
+    cursor: not-allowed;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.logout-btn {
+    background-color: #a01c29;
+    color: var(--white);
+}
+
+.logout-btn:hover {
+    background-color: #8b1a26;
+}
+
+.lis-sty-non {
+    list-style: none;
+}
+
+a.lnk {
+    text-decoration: none;
+    color: var(--white);
+}
+
+a.lnk:hover {
+    color: var(--accent-color);
+}
+
+a.lnk:active {
+    color: var(--accent-color);
+}

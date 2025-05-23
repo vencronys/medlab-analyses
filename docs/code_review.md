@@ -1,6 +1,6 @@
-# Labanal Project - Code Review Guidelines
+# MedLab Analyses Project - Code Review Guidelines
 
-This document outlines the process and best practices for conducting code reviews in the Labanal project. Code reviews are essential to ensure code quality, maintainability, and consistency across the project.
+This document outlines the process and best practices for conducting code reviews in the MedLab Analyses project. Code reviews are essential to ensure code quality, maintainability, and consistency across the project.
 
 ## Purpose of Code Reviews
 - **Improve code quality**: Catch bugs, enhance readability, and ensure consistency.

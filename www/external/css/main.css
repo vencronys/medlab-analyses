@@ -1,0 +1,11 @@
+/* main.css */
+@import url(../../assets/css/normalize.css);
+@import url(../../assets/css/colors.css);
+@import url(../../assets/css/layout.css);
+@import url(../../assets/css/components.css);
+@import url(../../assets/css/typography.css);
+@import url(components/topbar.css);
+@import url(components/navigation.css);
+@import url(components/contact.css);
+@import url(components/footer.css);
+@import url(pages/home.css);

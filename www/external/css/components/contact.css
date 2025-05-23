@@ -1,0 +1,43 @@
+.contact {
+    padding: 40px 0;
+    margin: 40px 0 24px;
+}
+
+.contact p,
+.contact h3 {
+    text-align: center;
+}
+
+.contact > p {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.contact h3 {
+    margin-top: 8px;
+    margin-bottom: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.contact-cards > div {
+    flex: 1;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    background-color: var(--accent-color);
+}
+
+.contact-cards > div i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.contact-cards > div p:nth-child(2) {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}

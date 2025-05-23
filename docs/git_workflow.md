@@ -1,6 +1,6 @@
-# Labanal Git Workflow Guidelines
+# MedLab Analyses Git Workflow Guidelines
 
-This document outlines the Git workflow for the Labanal project to ensure smooth collaboration and maintain a clean, organized repository.
+This document outlines the Git workflow for the MedLab Analyses project to ensure smooth collaboration and maintain a clean, organized repository.
 
 ---
 

@@ -1,0 +1,40 @@
+.topbar {
+    background-color: var(--white);
+    margin: 0 -180px;
+    padding: 0 180px;
+}
+
+.topbar .logo i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.topbar .logo span {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+.topbar .logo span:first-of-type {
+    color: var(--primary-color);
+}
+
+.topbar .logo span:last-of-type {
+    color: var(--secondary-color);
+}
+
+.topbar > div:not(.logo) p:first-of-type {
+    color: var(--primary-color);
+}
+
+.topbar > div:not(.logo) p:last-of-type {
+    color: var(--secondary-color);
+}
+
+.topbar > div:not(.logo) i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.topbar p {
+    font-size: 1.2rem;
+}
