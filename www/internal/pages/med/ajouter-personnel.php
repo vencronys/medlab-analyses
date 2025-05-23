@@ -57,10 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             throw new Exception("La date d'embauche est invalide");
         }
 
-        // Hash the password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // Create account
         $stmt = $conn->prepare("
             INSERT INTO DISN1IMH_V13_compte 
             (email_compte, mot_de_passe_compte, privilege_compte, statut_compte)
@@ -68,12 +66,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ");
         $stmt->execute([
             ':email' => $email,
-            ':password' => $hashed_password,
+            ':password' => $password,
             ':privilege' => strtoupper($type)
         ]);
         $id_compte = $conn->lastInsertId();
 
-        // Create personnel record
         $table_prefix = $type === 'chef_technicien' ? 'chef_technicien' : $type;
         $query = "INSERT INTO DISN1IMH_V13_{$table_prefix} (
             nom_{$table_prefix}, prenom_{$table_prefix}, cin_{$table_prefix},

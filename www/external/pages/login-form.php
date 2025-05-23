@@ -70,7 +70,7 @@ if (isset($_SESSION['id_compte'])) {
 
                 <div class="form-links">
                     <a href="#">Mot de passe oublié?</a>
-                    <a href="#">Créer un compte</a>
+                    <a href="./signup-form.php">Créer un compte</a>
                 </div>
             </form>
         </div>

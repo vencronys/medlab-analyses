@@ -262,3 +262,108 @@
 [2025-05-12 02:51:52] INFO: Closing database connection...
 [2025-05-12 02:51:52] INFO: Database connection closed successfully
 [2025-05-12 02:51:52] INFO: Application shutdown complete
+[2025-05-22 19:26:14] INFO: Starting MedLab application...
+[2025-05-22 19:26:14] INFO: Attempting to establish database connection
+[2025-05-22 19:26:14] INFO: Initializing database connection...
+[2025-05-22 19:26:14] INFO: Database connection established successfully
+[2025-05-22 19:26:14] INFO: Database connection successful
+[2025-05-22 19:26:14] INFO: Initializing main menu
+[2025-05-22 19:26:14] INFO: Displaying main menu
+[2025-05-22 19:26:31] INFO: Attempting authentication for email: tech.cpp1@system.local
+[2025-05-22 19:26:31] INFO: Reusing existing database connection
+[2025-05-22 19:26:31] INFO: Authentication successful for email: tech.cpp1@system.local
+[2025-05-22 19:26:31] INFO: Initializing database connection...
+[2025-05-22 19:26:31] INFO: Database connection established successfully
+[2025-05-22 19:26:31] INFO: Displaying Technicien Menu
+[2025-05-22 19:26:32] INFO: Technicien selected option: 1
+[2025-05-22 19:26:32] INFO: Attempting to view the profile
+[2025-05-22 19:26:43] INFO: Technicien selected option: 2
+[2025-05-22 19:26:43] INFO: Attempting to view prelevements
+[2025-05-22 19:26:43] INFO: Initializing database connection...
+[2025-05-22 19:26:43] INFO: Database connection established successfully
+[2025-05-22 19:26:51] INFO: Technicien selected option: 3
+[2025-05-22 19:26:51] INFO: Technicien logging out
+[2025-05-22 19:27:10] INFO: Attempting authentication for email: tech.cpp@system.local
+[2025-05-22 19:27:10] INFO: Initializing database connection...
+[2025-05-22 19:27:11] INFO: Database connection established successfully
+[2025-05-22 19:27:11] INFO: Authentication successful for email: tech.cpp@system.local
+[2025-05-22 19:27:11] INFO: Initializing database connection...
+[2025-05-22 19:27:11] INFO: Database connection established successfully
+[2025-05-22 19:27:11] INFO: Displaying Technicien Menu
+[2025-05-22 19:27:12] INFO: Technicien selected option: 1
+[2025-05-22 19:27:12] INFO: Attempting to view the profile
+[2025-05-22 19:27:15] INFO: Technicien selected option: 2
+[2025-05-22 19:27:15] INFO: Attempting to view prelevements
+[2025-05-22 19:27:15] INFO: Initializing database connection...
+[2025-05-22 19:27:15] INFO: Database connection established successfully
+[2025-05-22 19:27:18] INFO: Technicien selected option: 2
+[2025-05-22 19:27:18] INFO: Attempting to view prelevements
+[2025-05-22 19:27:18] INFO: Initializing database connection...
+[2025-05-22 19:27:18] INFO: Database connection established successfully
+[2025-05-22 19:27:21] INFO: Technicien selected option: 3
+[2025-05-22 19:27:21] INFO: Technicien logging out
+[2025-05-22 19:27:42] INFO: Attempting authentication for email: chef1@lab.local
+[2025-05-22 19:27:42] INFO: Initializing database connection...
+[2025-05-22 19:27:42] INFO: Database connection established successfully
+[2025-05-22 19:27:42] INFO: Authentication successful for email: chef1@lab.local
+[2025-05-22 19:27:42] INFO: Initializing database connection...
+[2025-05-22 19:27:42] INFO: Database connection established successfully
+[2025-05-22 19:27:42] INFO: Displaying ChefTechnicien Menu
+[2025-05-22 19:27:44] INFO: Technicien selected option: 1
+[2025-05-22 19:27:44] INFO: Attempting to view the profile
+[2025-05-22 19:27:46] INFO: Technicien selected option: 2
+[2025-05-22 19:27:46] INFO: Attempting to view tasks
+[2025-05-22 19:27:48] INFO: Technicien selected option: 3
+[2025-05-22 19:27:48] INFO: ChefTechnicien logging out
+[2025-05-22 19:27:51] INFO: Application shutdown initiated
+[2025-05-22 19:27:51] INFO: Closing database connection...
+[2025-05-22 19:27:51] INFO: Database connection closed successfully
+[2025-05-22 19:27:51] INFO: Application shutdown complete
+[2025-05-23 07:21:07] INFO: Starting MedLab application...
+[2025-05-23 07:21:07] INFO: Attempting to establish database connection
+[2025-05-23 07:21:07] INFO: Initializing database connection...
+[2025-05-23 07:21:08] INFO: Database connection established successfully
+[2025-05-23 07:21:08] INFO: Database connection successful
+[2025-05-23 07:21:08] INFO: Initializing main menu
+[2025-05-23 07:21:08] INFO: Displaying main menu
+[2025-05-23 07:21:19] INFO: Attempting authentication for email: omo@tech.com
+[2025-05-23 07:21:19] INFO: Reusing existing database connection
+[2025-05-23 07:21:19] INFO: Authentication successful for email: omo@tech.com
+[2025-05-23 07:21:19] INFO: Initializing database connection...
+[2025-05-23 07:21:19] INFO: Database connection established successfully
+[2025-05-23 07:21:19] INFO: Displaying Technicien Menu
+[2025-05-23 07:21:21] INFO: Technicien selected option: 1
+[2025-05-23 07:21:21] INFO: Attempting to view the profile
+[2025-05-23 07:21:25] INFO: Technicien selected option: 2
+[2025-05-23 07:21:25] INFO: Attempting to view prelevements
+[2025-05-23 07:21:25] INFO: Initializing database connection...
+[2025-05-23 07:21:25] INFO: Database connection established successfully
+[2025-05-23 07:22:25] INFO: Technicien selected option: 3
+[2025-05-23 07:22:25] INFO: Technicien logging out
+[2025-05-23 07:22:27] INFO: Application shutdown initiated
+[2025-05-23 07:22:27] INFO: Closing database connection...
+[2025-05-23 07:22:27] INFO: Database connection closed successfully
+[2025-05-23 07:22:27] INFO: Application shutdown complete
+[2025-05-23 08:09:58] INFO: Starting MedLab application...
+[2025-05-23 08:09:58] INFO: Attempting to establish database connection
+[2025-05-23 08:09:58] INFO: Initializing database connection...
+[2025-05-23 08:09:59] INFO: Database connection established successfully
+[2025-05-23 08:09:59] INFO: Database connection successful
+[2025-05-23 08:09:59] INFO: Initializing main menu
+[2025-05-23 08:09:59] INFO: Displaying main menu
+[2025-05-23 08:10:07] INFO: Attempting authentication for email: sout@tech.com
+[2025-05-23 08:10:07] INFO: Reusing existing database connection
+[2025-05-23 08:10:07] INFO: Authentication successful for email: sout@tech.com
+[2025-05-23 08:10:07] INFO: Initializing database connection...
+[2025-05-23 08:10:07] INFO: Database connection established successfully
+[2025-05-23 08:10:07] INFO: Displaying Technicien Menu
+[2025-05-23 08:10:08] INFO: Technicien selected option: 1
+[2025-05-23 08:10:08] INFO: Attempting to view the profile
+[2025-05-23 08:10:11] INFO: Technicien selected option: 2
+[2025-05-23 08:10:11] INFO: Attempting to view prelevements
+[2025-05-23 08:10:11] INFO: Initializing database connection...
+[2025-05-23 08:10:11] INFO: Database connection established successfully
+[2025-05-23 08:11:01] INFO: Technicien selected option: 2
+[2025-05-23 08:11:01] INFO: Attempting to view prelevements
+[2025-05-23 08:11:01] INFO: Initializing database connection...
+[2025-05-23 08:11:01] INFO: Database connection established successfully
