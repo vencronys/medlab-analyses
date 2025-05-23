@@ -27,7 +27,7 @@ session_start();
                     <a class="nav-link" href="/medlab-analyses/www/internal/pages/infirmier/dashboard.php">Tableau de bord</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/medlab-analyses/www/internal/pages/infirmier/liste-prelevement.php">Prélèvements</a>
+                    <a class="nav-link" href="/medlab-analyses/www/internal/pages/infirmier/consulter-prelevements.php">Prélèvements</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/medlab-analyses/www/internal/pages/infirmier/ajouter-prelevement.php">Nouveau prélèvement</a>
