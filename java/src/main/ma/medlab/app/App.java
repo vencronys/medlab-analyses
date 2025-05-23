@@ -16,7 +16,6 @@ public class App {
             Connection connection = DatabaseConfig.getConnection();
             LoggerUtil.info("Database connection successful");
             
-            // Start the application
             LoggerUtil.info("Initializing main menu");
             MainMenuView mainMenu = new MainMenuView();
             LoggerUtil.info("Displaying main menu");
@@ -29,7 +28,6 @@ public class App {
             System.err.println("Error details: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Always close the database connection when the application ends
             LoggerUtil.info("Application shutdown initiated");
             DatabaseConfig.closeConnection();
             LoggerUtil.info("Application shutdown complete");

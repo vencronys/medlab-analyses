@@ -34,7 +34,6 @@ public class Technicien {
         this.dateEmbauche = dateEmbauche;
     }
 
-    // Getters for all attributes
     public int getId() {
         return id;
     }
